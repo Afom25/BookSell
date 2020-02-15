@@ -1,0 +1,39 @@
+
+{% extends 'booksell/base.html' %}
+
+<!DOCTYPE html>
+<html>
+ {% load static%}
+<head>
+  <meta charset="utf-8">
+
+  {% if title %}
+  <title>Eribook - {{title}}</title>
+  {% else %}
+  <title> EriBook</title>
+  {% endif %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+ 
+
+</head>
+
+<body>
+  {% include "booksell/navbar.html" %}
+  
+  {% block content %}
+  <h1  class='text-center'>About</h1>
+
+  <div class="container">
+
+
+  </div>
+
+
+  <hr>
+
+  {%endblock%}
+
+</body>
+
+</html>
