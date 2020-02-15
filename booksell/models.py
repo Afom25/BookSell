@@ -1,3 +1,33 @@
 from django.db import models
 
 # Create your models here.
+
+
+        
+class Book(models.Model):
+   
+    title_book = models.CharField(max_length=50)
+    author_book = models.CharField(max_length=50)
+    image = models.ImageField(upload_to = 'bookerisell')
+    amount = models.IntegerField()
+   
+    
+    
+    def save_image(self):
+            self.save()
+
+    def delete_image(self):
+        self.delete()
+
+        
+
+    @classmethod
+    def search_by_title(cls,search_term):
+        image = cls.objects.filter(name__icontains=search_term)
+        return image
+        
+    
+    
+    
+    
+    

@@ -1,0 +1,46 @@
+{% load bootstrap3 %}
+
+<html>
+        {% load static%}
+    <body>
+            {% include "booksell/navbar.html" %}
+            {% block content %}
+            <h2> Contact</h2>
+        
+            <form>
+                <hr>
+                <ul class="form-style-1">
+                    <li><label>Full Name </label>
+                        <br>
+                        <input type="text" name="field1" class="field-divided" placeholder="First" /> </li>
+                    <hr>
+        
+                    <li>
+                        <label>Email </label>
+                        <br>
+                        <input type="email" name="field3" class="field-long" />
+                    </li>
+                    <hr>
+                    <li>
+                        <label>Your Message </label>
+                        <br>
+                        <textarea name="message" id="message" class="field-long field-textarea"></textarea>
+                    </li>
+                    <hr>
+                    <li>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </li>
+                    <hr>
+                </ul><a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </form>
+      
+            {% endblock %}
+        
+        </body>
+        
+
+</html>

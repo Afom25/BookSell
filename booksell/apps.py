@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class BooksellConfig(AppConfig):
-    name = 'booksell'
+class BooksellsConfig(AppConfig):
+    name = 'booksells'
