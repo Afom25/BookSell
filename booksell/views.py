@@ -2,13 +2,16 @@ from django.shortcuts import render,redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.core.paginator import Paginator , EmptyPage , PageNotAnInteger
-from .models import Book
+from .models import Book,History
 
 # Create your views here.
 
 def index (request):
     model = Book.objects.all()
     return render (request ,'booksell/home.html',{'model':model})
+def history(request):
+    modelhistory = History.objects.all()
+    return render (request, 'booksell/history.html',{'modelhistory':modelhistory})
 
 def about(request):
     return render (request , 'booksell/about.html')

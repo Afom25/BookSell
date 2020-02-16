@@ -115,7 +115,7 @@
               <a class="nav-link" href="{% url 'history' %}">History-Books</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Fiction-Books</a>
+              <a class="nav-link" href="#">Fiction-Books</a>  
             </li>
             
           </ul>
@@ -142,27 +142,23 @@
         <div class="container">
     
           <div class="row">
-              {% for books in model %}
+              {% for bookhistory in modelhistory %}
             <div class="col-md-3">               
-                    
-    <!-- <button type="button" class="btn btn-link" data-toggle="modal" data-target="#image{{ books.id }}">
-        <img src="{{books.image.url}}" class="card-img-top"  width=200px> 
-        
-    </button> -->
-    <a href=""> <img src="{{books.image.url}}" class="card-img-top"  width=150px height=150px>  </a>
-    <h5>{{books.title_book }}</h5>
-          <h6> {{books.author_book}}</h6>
+
+    <a href=""> <img src="{{bookhistory.history_image.url}}" class="card-img-top"  width=150px height=150px>  </a>
+    <h5>{{bookhistory.history_title}}</h5>
+          <h6> {{bookhistory.history_author}}</h6>
           <br>
-          <h6>$ {{books.amount}}</h6>
+          <h6>$ {{bookhistory.history_amount}}</h6>
     
-    <div class="modal fade" id="image{{ books.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="image{{ bookhistory.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-              <img src="{{books.image.url}}" class="card-img-top"  width=100px> 
-            <h5 class="modal-title" id="exampleModalLabel">{{books.title_book}}</h5>
-            <h4> :{{books.author_book}}</h4>
-          <h4>$ :{{books.amount}}</h4>
+              <img src="{{bookhistory.history_image.url}}" class="card-img-top"  width=100px> 
+            <h5 class="modal-title" id="exampleModalLabel">{{bookhistory.history_title}}</h5>
+            <h4> :{{booksbookhistory.history_author}}</h4>
+          <h4>$ :{{bookhistory.history_amount}}</h4>
           
           </div>
         </div>

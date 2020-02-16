@@ -10,8 +10,12 @@ class Book(models.Model):
     author_book = models.CharField(max_length=50)
     image = models.ImageField(upload_to = 'bookerisell')
     amount = models.IntegerField()
-   
-    
+
+class History(models.Model):
+    history_title = models.CharField(max_length=50)
+    history_author = models.CharField(max_length=50)
+    history_image = models.ImageField(upload_to='bookerisell')
+    history_amount = models.IntegerField()
     
     def save_image(self):
             self.save()
