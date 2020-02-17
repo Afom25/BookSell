@@ -17,6 +17,15 @@ class History(models.Model):
     history_image = models.ImageField(upload_to='bookerisell')
     history_amount = models.IntegerField()
     
+class Fiction(models.Model):
+    fiction_title= models.CharField(max_length=50)
+    fiction_author = models.CharField(max_length=50)
+    fiction_image = models.ImageField(upload_to='bookerisell')
+    fiction_amount = models.IntegerField()
+    
+    
+    
+    
     def save_image(self):
             self.save()
 
@@ -27,7 +36,7 @@ class History(models.Model):
 
     @classmethod
     def search_by_title(cls,search_term):
-        image = cls.objects.filter(name__icontains=search_term)
+        image = cls.objects.filter(title_book__icontains=search_term)
         return image
         
     

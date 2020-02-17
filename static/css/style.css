@@ -1,12 +1,17 @@
 
 
-
+h2{
+    text-align:center;
+}
 h5{
     color:red;
     text-align:center;
 }
-h6{
+h5{
     text-align: center;
     color: blue;
-    font-size:25px;
+    
+}
+h6{
+text-align: center;
 }

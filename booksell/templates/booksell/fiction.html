@@ -24,12 +24,12 @@
 
 <body>
   {% include "booksell/navbar.html" %}
+  
   {% block content %}
   
   <div class="container">
-    <h2>Eri-Book</h2>
+    <h2> EriBook - Fictions </h2>
   </div>
-      
       <hr>
  <div class="container">
       
@@ -40,15 +40,13 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
           aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
-    
+        </button> 
         <div class="collapse navbar-collapse" id="basicExampleNav">
-        
           <ul class="navbar-nav mr-auto">
-          
+
             <li class="nav-item">
                     <a class="nav-link" href="{% url 'home' %}">All-Books</a>
-                  </li>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'history' %}">History-Books</a>
             </li>
@@ -63,26 +61,28 @@
             </div>
           </form>
         </div>
+  
       </nav>  
  </div>
 
  <div class="container">
- <h3 style="color:orange;text-align:center"> EriBooks Bestsellers</h3>
+ 
+ <h3 style="color:orange;text-align:center"> EriBooks Bestselleers in Fiction-Books</h3>
 
   <main role="main">
       <div class="album py-5 bg-white">
         <div class="container">
     
           <div class="row">
-              {% for bookhistory in modelhistory %}
+              {% for bookfiction in modelfiction %}
             <div class="col-md-3">               
-
-    <a href=""> <img src="{{bookhistory.history_image.url}}" class="card-img-top"  width=150px height=150px>  </a>
-    <h5>{{bookhistory.history_title}}</h5>
-          <h6> {{bookhistory.history_author}}</h6>
-          <h6>$ {{bookhistory.history_amount}}</h6>
-    
-    <!-- <div class="modal fade" id="image{{ bookhistory.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <a href=""> <img src="{{bookfiction.fiction_image.url}}" class="card-img-top"  width=150px height=150px>  </a>
+          <h5>{{bookfiction.fiction_title}}</h5>
+          <h6> {{bookfiction.fiction_author}}</h6>
+          <br>
+          <h6>$ {{bookfiction.fiction_amount}}</h6>
+<!--     
+    <div class="modal fade" id="image{{ bookhistory.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -103,71 +103,6 @@
     </main>
   </div>
 
-
-<footer class="page-footer font-small blue pt-4">
-
-  
-    <div class="container-fluid text-center text-md-left">
-  
-   
-      <div class="row">
-  
-        <div class="col-md-6 mt-md-0 mt-3">
-          <h5 class="text-uppercase">Eribooks</h5>
-          <p>Here some facts abouts .</p>
-  
-        </div>
-  
-        <hr class="clearfix w-100 d-md-none pb-3">
-        <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Contact </a>
-            </li>
-            <li>
-              <a href="#!">Facebook</a>
-            </li>
-            <li>
-              <a href="#!">Instagram</a>
-            </li>
-            <li>
-              <a href="#!">LinkeIn</a>
-            </li>
-          </ul>
-  
-        </div>
-      
-        <div class="col-md-3 mb-md-0 mb-3">
-  
-          <h5 class="text-uppercase">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!"></a>
-            </li>
-            <li>
-              <a href="#!">2</a>
-            </li>
-            <li>
-              <a href="#!">3</a>
-            </li>
-            <li>
-              <a href="#!"> 4</a>
-            </li>
-          </ul>
-  
-        </div>
-      </div>
-    
-  
-    </div>
-   
-    <div class="footer-copyright text-center py-3">© 2020 Eribooks
-      <a href="https://mdbootstrap.com/education/bootstrap/"> Reading.com</a>
-    </div>
-  </footer>
   {%endblock%}
 
 </body>

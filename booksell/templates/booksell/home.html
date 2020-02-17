@@ -20,6 +20,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="spectre.min.css">
+<link rel="stylesheet" href="spectre-exp.min.css">
+<link rel="stylesheet" href="spectre-icons.min.css">
 {% endblock %}
 
 <body>
@@ -92,30 +95,26 @@
  <div class="container">
       
 <nav class="navbar navbar-expand-lg navbar-dark primary-color">
-        <!-- Navbar brand -->
+   
         <a class="navbar-brand" href="#">Eribook</a>
-        <!-- Collapse button -->
+  
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
           aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
     
         <div class="collapse navbar-collapse" id="basicExampleNav">
-          <!-- Links -->
+        
           <ul class="navbar-nav mr-auto">
-            <!-- <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li> -->
+       
             <li class="nav-item">
-                    <a class="nav-link" href="#">All-Books</a>
+                    <a class="nav-link" href="{% url 'home' %}">All-Books</a>
                   </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'history' %}">History-Books</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Fiction-Books</a>
+              <a class="nav-link" href="{% url 'fiction'%}">Fiction-Books</a>
             </li>
             
           </ul>
@@ -145,29 +144,14 @@
               {% for books in model %}
             <div class="col-md-3">               
                     
-    <!-- <button type="button" class="btn btn-link" data-toggle="modal" data-target="#image{{ books.id }}">
-        <img src="{{books.image.url}}" class="card-img-top"  width=200px> 
-        
-    </button> -->
+
     <a href=""> <img src="{{books.image.url}}" class="card-img-top"  width=150px height=150px>  </a>
-    <h5>{{books.title_book }}</h5>
-          <h6> {{books.author_book}}</h6>
-          <br>
+    <!-- <h5>{{books.title_book }}</h5> -->
+          <h5> {{books.author_book}}</h5>
+  
           <h6>$ {{books.amount}}</h6>
     
-    <div class="modal fade" id="image{{ books.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-              <img src="{{books.image.url}}" class="card-img-top"  width=100px> 
-            <h5 class="modal-title" id="exampleModalLabel">{{books.title_book}}</h5>
-            <h4> :{{books.author_book}}</h4>
-          <h4>$ :{{books.amount}}</h4>
-          
-          </div>
-        </div>
-      </div>
-    </div>
+   
                 </div>
             {% endfor %} 
             </div>
@@ -176,59 +160,22 @@
     </main>
   </div>
 
-
-  
-      <ul class="pagination">
-        {% if books.has_previous %}
-          <li class="page-item">
-            <a href="?page={{books.previous_page_number}}" class="page-link">&laquo;</a>
-          </li>
-        {% endif %}
-
-        {% for books in model.paginator.page_range %}
-          {% if model.number == books %}
-
-        <li class="page-item active ">
-          <a class="page-link" href="?pages={{books}}">{{ books }}</a>
-        </li>
-        { % else %}
-        <li class="page-item ">
-          <a class="page-link" href="?pages={{books}}">{{ books }}</a>
-        </li>
-
-        {% endif %}
- 
-      {% endfor %}
-      {% if books.has_next %}
-          <li class="page-item">
-            <a href="?page={{books.previous_page_number}}" class="page-link">&laquo;</a>
-          </li>
-     {% endif %}
-      </ul>
-
+     
 <form class="text-center border border-light p-5" action="#!">
-
     <p class="h4 mb-4">Subscribe</p>
-
     <p>Join our mailing list. We write rarely, but only the best content.</p>
-
-    <p>
-        <a href="" target="_blank">See the last newsletter</a>
-    </p>
-
+    <p><a href="" target="_blank">See the last newsletter</a> </p>
     <input type="email" id="defaultSubscriptionFormEmail" class="form-control mb-4" placeholder="E-mail">
-
     <button class="btn btn-info btn-block" type="submit">Sign in</button>
-
-
 </form>
 
-<footer class="page-footer font-small blue pt-4">
 
-  
+
+
+ 
+
+<footer class="page-footer font-small blue pt-4">
     <div class="container-fluid text-center text-md-left">
-  
-   
       <div class="row">
   
         <div class="col-md-6 mt-md-0 mt-3">
@@ -264,7 +211,7 @@
   
           <ul class="list-unstyled">
             <li>
-              <a href="#!"></a>
+              <a href="#!">1</a>
             </li>
             <li>
               <a href="#!">2</a>
@@ -287,7 +234,13 @@
       <a href="https://mdbootstrap.com/education/bootstrap/"> Reading.com</a>
     </div>
   </footer>
+
+
   {%endblock%}
+
+
+
+
 
 </body>
 
