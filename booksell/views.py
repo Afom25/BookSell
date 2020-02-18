@@ -32,7 +32,7 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         
-        return render(request, 'book/serach.html',{"message"})
+        return render(request, 'booksell/serach.html',{"message"})
 
 def signup(request):
     if request.method == 'POST':

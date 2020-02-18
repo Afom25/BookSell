@@ -15,3 +15,27 @@ h5{
 h6{
 text-align: center;
 }
+/* .button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  } */
+  
+  /* .button:hover {
+    opacity: 0.7;
+  } */
+  .empty-action {
+      text-align: center;
+      float: left;
+
+  }
+  #button1{
+      float:center;
+      text-align: center;
+  }

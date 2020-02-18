@@ -142,17 +142,22 @@
     
           <div class="row">
               {% for books in model %}
-            <div class="col-md-3">               
+              
+                  <div class="col-md-3">               
                     
 
-    <a href=""> <img src="{{books.image.url}}" class="card-img-top"  width=150px height=150px>  </a>
-    <!-- <h5>{{books.title_book }}</h5> -->
-          <h5> {{books.author_book}}</h5>
-  
-          <h6>$ {{books.amount}}</h6>
-    
-   
-                </div>
+                      <a href=""> <img src="{{books.image.url}}" class="card-img-top"  width=150px height=150px>  </a>
+                      <h5>{{books.title_book }}</h5>
+                            <h5> {{books.author_book}}</h5>
+                    
+                            <h6>$ {{books.amount}}</h6>
+                            <div class="empty-action">
+                                <button class="btn btn-primary">Add Cart</button>
+                              </div>
+                                
+
+              </div>
+           
             {% endfor %} 
             </div>
           </div>
@@ -169,10 +174,6 @@
     <button class="btn btn-info btn-block" type="submit">Sign in</button>
 </form>
 
-
-
-
- 
 
 <footer class="page-footer font-small blue pt-4">
     <div class="container-fluid text-center text-md-left">

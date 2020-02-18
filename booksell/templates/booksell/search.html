@@ -1,20 +1,30 @@
+
+{% extends 'book/base.html'%}
+{% block content %}
+
+
 <main role="main">
         <div class="album py-5 bg-white">
           <div class="container">
       
             <div class="row">
-                {% for bookhistory in modelhistory %}
+                    {% if shareit%}
+                    <h2>Found {{shareit|length}} of serached term {{message}} </h2>
+                    {% else %}
+                    <h2> Found 0 for the search term {{message}} </h2>
+                    {% endif %}
+            </div>
+            <div class="row"> 
+                {% if book %}
+                    {% for image in book %}
               <div class="col-md-3">               
-  
-      <a href=""> <img src="{{bookhistory.history_image.url}}" class="card-img-top"  width=150px height=150px>  </a>
-      <h5>{{bookhistory.history_title}}</h5>
-            <h6> {{bookhistory.history_author}}</h6>
-            <h6>$ {{bookhistory.history_amount}}</h6>
-      
- 
-                  </div>
+                <h5>{{ image.title_book}}</h5>
+            </div>
               {% endfor %} 
+              {%endif%}
               </div>
             </div>
           </div>
       </main>
+
+{%endblock%}
