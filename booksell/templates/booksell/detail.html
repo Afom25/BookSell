@@ -34,63 +34,7 @@
   <div class="container">
     <h2>Why Eri-Book?</h2>
   </div>
-<!-- 
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-       
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-2" data-slide-to="1"></li>
-          <li data-target="#carousel-example-2" data-slide-to="2"></li>
-        </ol>
-    
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active">
-            <div class="view">
-              <img src="static/images/2.jpeg"
-                alt="First slide">
-              <div class="mask rgba-black-light"></div>
-            </div>
-            <div class="carousel-caption">
-              <h3 class="h3-responsive">Reading  is the way  to success </h3>
-              <p>William</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-         
-            <div class="view">
-              <img src="static/images/2.jpeg"
-                alt="Second slide">
-              <div class="mask rgba-black-strong"></div>
-            </div>
-            <div class="carousel-caption">
-              <h3 class="h3-responsive"> Reading books is Power</h3>
-              <p>Robert</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-        
-            <div class="view">
-              <img src="static/images/2.jpeg"
-                alt="Third slide" >
-              <div class="mask rgba-black-slight"></div>
-            </div>
-            <div class="carousel-caption">
-              <h3 class="h3-responsive">Reading boostrong ks is makes you </h3>
-              <p>Rose</p>
-            </div>
-          </div>
-        </div>
-   
-        <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      
-      </div> -->
+
       
       <hr>
  <div class="container">
@@ -145,7 +89,7 @@
               {% for books in model %}
               
                   <div class="col-md-3">               
-                      <a href="{% url 'details' %}"> <img src="{{books.image.url}}" class="card-img-top"  width=350px height=350px>  </a>
+                    <a class="nav-link" href="{% url 'detail' %}"> <img src="{{books.image.url}}" class="card-img-top"  width=350px height=350px></a> 
                       <!-- <h5>{{books.title_book }}</h5>
                             <h5> {{books.author_book}}</h5> -->
                     

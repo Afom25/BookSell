@@ -22,6 +22,11 @@ class Fiction(models.Model):
     fiction_author = models.CharField(max_length=50)
     fiction_image = models.ImageField(upload_to='bookerisell')
     fiction_amount = models.IntegerField()
+class Detail(models.Model):
+    detail_title = models.CharField(max_length=50)
+    detail_author = models.CharField(max_length=50)
+    detail_image = models.ImageField(upload_to='bookerisell')
+    detail_amount = models.IntegerField()
     
     
     

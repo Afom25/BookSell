@@ -15,10 +15,9 @@ def history(request):
 def fiction(request):
     modelfiction = Fiction.objects.all()
     return render (request, 'booksell/fiction.html', {'modelfiction':modelfiction})
-def details(request):
+def detail(request):
     model = Book.objects.all()
-    return render (request ,'booksell/details.html',{'model':model})
-    
+    return render (request ,'booksell/detail.html',{'model':model})
 
 def about(request):
     return render (request , 'booksell/about.html')
