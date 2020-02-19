@@ -50,3 +50,6 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render (request , 'booksell/signup.html', {'form':form})
+def register(request):
+    form = UserCreationForm()
+    return render(request,'booksell/register.html',{'form':form})

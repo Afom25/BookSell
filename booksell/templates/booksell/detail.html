@@ -45,28 +45,69 @@
   <main role="main">
       <div class="album py-5 bg-white">
         <div class="container">
-    
-            <div class="row">
+            <div class="col-md-8">
+          
+                <div class="row no-gutters">
+                  <div class="col-md-5">
+                      <img src="{{books.image.url}}" class="card-img-top" width=500px  >
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body">
+                      <h5 class="card-title">{{books.author_book}}</h5><br>
+                      <h4>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h4>
+                      <p class="card-text"> ${{books.amount}}</p>
+                      <h6><button type="button" class="btn btn-primary">Add Cart</button></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               <br><br><br>
+              <div class="col-md-4">
+                  <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputCity">Name</label>
+                        <input type="text" class="form-control" id="inputCity">
+                      </div>
+              </div>
+              <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Comment</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Example file input</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+          
+              </div>
+   
+                  
+
+            </div>
+              <hr>       <hr>
+              
+             
+
+    <div class="row">
               
                 
-                    <div class="col-md-3">               
-                    
-                            <img src="{{books.image.url}}" class="card-img-top"  width=450px height=450px>
-                         
-                        <h5>{{books.title_book }}</h5>
-                              <h5> {{books.author_book}}</h5>
-                      
-                              <h6>$ {{books.amount}}</h6>
-                              <h6><button type="button" class="btn btn-primary">Add Cart</button></h6>
-                              <hr>
-                                        
-                </div>
-                <hr>
-             
+        <div class="col-md-3">               
         
-              <hr>
-              </div>
-              
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle"
+            alt="woman avatar">
+            <h4 class="card-title">Anna Doe</h4>
+            <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci
+            </p>
+                  <h6><button type="button" class="btn btn-primary"></button></h6>
+                  <hr>
+                            
+    </div>
+    
+    <hr>
+ 
+
+  <hr>
+  
             
           </div>
         </div>
@@ -145,7 +186,23 @@
 
 
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/css/mdb.min.css" rel="stylesheet">
 
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.13.0/js/mdb.min.js"></script>
 </body>
 
 </html>

@@ -77,24 +77,12 @@
               {% for bookhistory in modelhistory %}
             <div class="col-md-3">               
 
-    <a href=""> <img src="{{bookhistory.history_image.url}}" class="card-img-top"  width=150px height=150px>  </a>
+                <a  href="}"><img src="{{bookhistory.history_image.url}}" class="card-img-top"  width=150px height=150px>  </a>
     <h5>{{bookhistory.history_title}}</h5>
           <h6> {{bookhistory.history_author}}</h6>
           <h6>$ {{bookhistory.history_amount}}</h6>
     
-    <!-- <div class="modal fade" id="image{{ bookhistory.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-              <img src="{{bookhistory.history_image.url}}" class="card-img-top"  width=100px> 
-            <h5 class="modal-title" id="exampleModalLabel">{{bookhistory.history_title}}</h5>
-            <h4> :{{booksbookhistory.history_author}}</h4>
-          <h4>$ :{{bookhistory.history_amount}}</h4>
-          
-          </div>
-        </div>
-      </div>
-    </div> -->
+ 
                 </div>
             {% endfor %} 
             </div>
