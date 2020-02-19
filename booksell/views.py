@@ -1,7 +1,7 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
-from django.core.paginator import Paginator , EmptyPage , PageNotAnInteger
+
 from .models import Book,History,Fiction
 
 # Create your views here.
@@ -15,9 +15,9 @@ def history(request):
 def fiction(request):
     modelfiction = Fiction.objects.all()
     return render (request, 'booksell/fiction.html', {'modelfiction':modelfiction})
-def detail(request):
-    model = Book.objects.all()
-    return render (request ,'booksell/detail.html',{'model':model})
+def detail(request,course_id):
+    book_detail = get_object_or_404(Book,pk=course_id)
+    return render (request ,'booksell/detail.html',{'books':book_detail})
 
 def about(request):
     return render (request , 'booksell/about.html')

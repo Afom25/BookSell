@@ -32,79 +32,41 @@
   {% block content %}
   
   <div class="container">
-    <h2>Why Eri-Book?</h2>
+    <h2> Eri-Book</h2>
   </div>
 
-      
-      <hr>
- <div class="container">
-      
-<nav class="navbar navbar-expand-lg navbar-dark primary-color">
-   
-        <a class="navbar-brand" href="#">Eribook</a>
-  
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <!-- <div class="collapse navbar-collapse" id="basicExampleNav">
-        
-          <ul class="navbar-nav mr-auto">
-       
-            <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">All-Books</a>
-                  </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'history' %}">History-Books</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'fiction'%}">Fiction-Books</a>
-            </li>
-            
-          </ul>
-          
-          <form class="form-inline">
-            <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-          </form>
-        </div> -->
-  
-      </nav>
-  
-      
- </div>
+    <hr>
 
  <div class="container">
  
 
- <h3 style="color:wheat;text-align:center"> EriBooks Bestsellers</h3>
+ <h3 style="color:orange;text-align:center">  {{books.title_book }} </h3>
 
   <main role="main">
       <div class="album py-5 bg-white">
         <div class="container">
     
-          <div class="row">
-              {% for books in model %}
+            <div class="row">
               
-                  <div class="col-md-3">               
-                    <a class="nav-link" href="{% url 'detail' %}"> <img src="{{books.image.url}}" class="card-img-top"  width=350px height=350px></a> 
-                      <!-- <h5>{{books.title_book }}</h5>
-                            <h5> {{books.author_book}}</h5> -->
+                
+                    <div class="col-md-3">               
                     
-                            <h6>$ {{books.amount}}</h6>
-                            <h6><button type="button" class="btn btn-primary">Add Cart</button></h6>
-                            <hr>
-                           
-                              
-                           
-              </div>
+                            <img src="{{books.image.url}}" class="card-img-top"  width=450px height=450px>
+                         
+                        <h5>{{books.title_book }}</h5>
+                              <h5> {{books.author_book}}</h5>
+                      
+                              <h6>$ {{books.amount}}</h6>
+                              <h6><button type="button" class="btn btn-primary">Add Cart</button></h6>
+                              <hr>
+                                        
+                </div>
+                <hr>
+             
+        
               <hr>
-           
-            {% endfor %} 
-            <hr>
-            </div>
+              </div>
+              
             
           </div>
         </div>
@@ -113,13 +75,7 @@
   </div>
 
      
-<form class="text-center border border-light p-5" action="#!">
-    <p class="h4 mb-4">Subscribe</p>
-    <p>Join our mailing list. We write rarely, but only the best content.</p>
-    <p><a href="" target="_blank">See the last newsletter</a> </p>
-    <input type="email" id="defaultSubscriptionFormEmail" class="form-control mb-4" placeholder="E-mail">
-    <button class="btn btn-info btn-block" type="submit">Sign in</button>
-</form>
+
 
 
 <footer class="page-footer font-small blue pt-4">
