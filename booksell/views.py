@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages 
+from .forms import UserRegisterFrom
 
 from .models import Book,History,Fiction
 
@@ -37,7 +39,7 @@ def search_results(request):
         
         return render(request, 'booksell/serach.html',{"message"})
 
-def signup(request):
+# def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -51,5 +53,14 @@ def signup(request):
         form = UserCreationForm()
     return render (request , 'booksell/signup.html', {'form':form})
 def register(request):
-    form = UserCreationForm()
+    if request.method == 'POST':
+        
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Account created for { username } !')
+            return redirect('home')
+    else:
+        form = UserCreationForm()
     return render(request,'booksell/register.html',{'form':form})
